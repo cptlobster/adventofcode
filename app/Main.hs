@@ -1,6 +1,8 @@
 module Main (main) where
 
-import Lib
+import Day01 (answer)
 
-main :: IO ()
-main = putStrLn "Use stack test!"
+main :: Int -> Int -> IO ()
+main = do
+  contents <- readFile "input/day01_1.txt"
+  putStrLn $ str $ answer contents
