@@ -1,8 +1,8 @@
 module Main (main) where
 
-import Day01 (answer)
+import Day01 (answer2)
 
-main :: Int -> Int -> IO ()
+main :: IO ()
 main = do
   contents <- readFile "input/day01_1.txt"
-  putStrLn $ str $ answer contents
+  print (answer2 contents)
