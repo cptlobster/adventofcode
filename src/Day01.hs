@@ -15,7 +15,7 @@ line_by_line2 :: String -> [Int]
 line_by_line2 i = map (findDigits . replaceStrings) (lines i)
 
 findDigits :: String -> Int
-findDigits str = f '0' '0' str
+findDigits = f '0' '0'
   where f '0' _ (s:ss) | isDigit s = f s s ss
                        | otherwise = f '0' '0' ss
         f n m (s:ss) | isDigit s = f n s ss
